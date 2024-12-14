@@ -1,18 +1,35 @@
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+
+[Route("auth")]
 [ApiController]
-[Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly FirebaseAuthService _authService;
+    private readonly FirebaseAuthService _firebaseAuthService;
 
-    public AuthController(FirebaseAuthService authService)
+    public AuthController(FirebaseAuthService firebaseAuthService)
     {
-        _authService = authService;
+        _firebaseAuthService = firebaseAuthService;
     }
 
+    // POST: /auth/login
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
-        var token = await _authService.Login(request.Email, request.Password);
-        return Ok(new {Token = token});
+        if (request == null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
+        {
+            return BadRequest("Email e senha são obrigatórios.");
+        }
+
+        try
+        {
+            // O método LoginAsync foi alterado para aceitar o token de ID do cliente
+            var token = await _firebaseAuthService.LoginAsync(request.Email, request.Password);
+            return Ok(new { Token = token });  // Retorna o UID do usuário ou um token de acesso
+        }
+        catch (Exception ex)
+        {
+            return Unauthorized(new { message = ex.Message });
+        }
     }
 }

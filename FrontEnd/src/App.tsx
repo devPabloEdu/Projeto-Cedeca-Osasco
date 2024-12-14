@@ -11,6 +11,7 @@ import Recanto from "./Pages/Recanto.tsx";
 import Centro from "./Pages/Centro.tsx";
 import Casper from "./Pages/Casper.tsx";
 import Doe from "./Pages/Doe.tsx";
+import Login from "./Login/Login.tsx";
 import "./Styles/Navbar.css";
 import "./Styles/Banner.css";
 import "./Styles/Quemsomos.css";
@@ -54,6 +55,8 @@ function App() {
                       <Route path="/atividades-casper" element={<Casper />} />
 
                       <Route path="/Doe" element={<Doe />} />
+
+                      <Route path="/Login" element={<Login />} />
 
                   </Routes>
               </main>

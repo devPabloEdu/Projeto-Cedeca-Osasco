@@ -74,7 +74,7 @@ function Navbar() {
             </div>
 
             <div className="loginbox">
-                    <button className="loginbutton"><FaUser /></button>
+                    <Link to="/Login"><button className="loginbutton"><FaUser /></button></Link>
                     <button className="addpostbutton"><MdAddPhotoAlternate /></button>
             </div>
         </div>
