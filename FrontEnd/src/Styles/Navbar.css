@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+}
+:root{
+    --azulnavbar: #232f50;
+    --azulnavbarhover: #121829;
+}
+
+.voltaroaotopobutton{
+    position: fixed;
+    display: flex;
+    text-align: right;
+    transform: translateY(1500%) translateX(50%);
+    z-index: 6;
+
+}
+.voltaroaotopobutton button{
+    background-color: #232f50;
+    color: whitesmoke;
+    padding: 10px;
+    width: 40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.navbarbox{
+    display: flex;
+    align-items: center;
+    background-color: whitesmoke;
+}
+.logocedecanav img{
+    width: 200px;
+}
+.navbarItens{
+    display: flex;
+}
+.navbarItens a{
+    text-decoration: none;
+    text-align: center;
+    padding: 30px;
+    color: var(--azulnavbar);
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    position: relative;
+    transition: all 0.80s ease;
+}
+.navbarItens a::after{
+    content: " - ";
+}
+
+.navbarItens a:hover{
+    text-decoration: dashed;
+    color: var(--azulnavbarhover);
+    text-shadow: #1218290a 1px 1px 2px;
+    background-color: rgba(156, 156, 156, 0.267);
+}
+.navbarItens a:hover::after{
+    content: "  v";
+    font-weight: 500;
+}
+.nav-item{
+    position: relative;
+}
+.Submenu{
+    display: none;
+}
+.Submenu a{
+    display: block;
+}
+.nav-item:hover .Submenu{
+    display: block;
+    position: absolute;
+    transform: translateY(8%);
+    animation: fadeIn 0.3s ease-in-out;
+    z-index: 5;
+}
+
+.Submenu{
+    background-color: #121829;
+    padding: 10px;
+    border-radius: 0px 0px 10px;
+}
+.Submenu a{
+    color: whitesmoke;
+}
+.Submenu a:hover{
+    color: #0a0d16;
+    background-color: rgba(245, 245, 245, 0.418);
+}
+.Submenu a::after{
+    content: "";
+}
+.Submenu a:hover::after{
+    content: "";
+}
+#submenuquemsomos{
+    transform: translateY(23%);
+    padding: 20px;
+}
+#submenuOnde{
+    transform: translateY(9%);
+}
+#submenulinhadotempo{
+    transform: translateY(27%);
+}
+#submenunossaatuacao{
+    transform: translateY(6.5%);
+}
+#submenudoe{
+    transform: translateY(24%);
+}
+#submenuredes{
+    transform: translateY(27%);
+    padding: 20px;
+}
+/* Animação opcional para o submenu */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(5);
+    }
+  }

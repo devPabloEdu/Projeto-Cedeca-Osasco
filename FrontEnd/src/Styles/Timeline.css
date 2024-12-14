@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+.titulolinhadotempo{
+    color: #232f50;
+    text-align: center;
+    padding: 20px;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2em;
+    letter-spacing: 11px;
+}
+
+/* Container da Timeline */
+.timeline {
+    position: relative;
+    margin: 20px auto;
+    padding: 0;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Linha principal da timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 100%;
+    background: #ccc;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 1;
+}
+
+/* Estilo de cada evento */
+.timeline-event {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    margin: 5px 0;
+    z-index: 2;
+}
+
+.timeline-event.top {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-event.bottom {
+    left: 50%;
+    text-align: left;
+}
+
+/* Conteúdo do evento */
+.timeline-content {
+    position: relative;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-00%) translateX(-50%);
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    color: #111727;
+    font-size: 15px;
+    font-family: "Lato", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: #666;
+    font-size: 15px;
+    font-family: "Lato", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Pontos na timeline */
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #232f50;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-1000%);
+    z-index: 2;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #c7c7c7;
+}
+
+.timeline-event.top::before {
+    right: -8px;
+}
+
+.timeline-event.bottom::before {
+    left: 20px;
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --fontTitle: "Roboto Condensed", sans-serif;
+}
+
+.bannerdefundo{
+    background-image: url("../Assets/Fundocriancas.jpg");
+}
+
+.bannerdefundo h1{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    color: whitesmoke;
+    font-size: 4em;
+    padding: 90px;
+    font-family: var(--fontTitle);
+}
+.inputpesquisabanner{
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.377);
+    padding: 20px;
+}
+.inputpesquisabanner input{
+    width: 50%;
+    background-color: rgba(245, 245, 245, 0.425);
+    padding: 15px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    color: #1e2641;
+    font-family: var(--fontTitle);
+    font-weight: 900;
+}
+.inputpesquisabanner button{
+    padding: 15px;
+    border: none;
+    background-color: #3a4d88;
+    color: whitesmoke;
+    font-family: var(--fontTitle);
+}
+.inputpesquisabanner button:hover{
+    background-color: #161d31;
+    cursor: pointer;
+}
