@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logocedeca from "../Assets/Logocedeca.png";
+import { FaUser } from "react-icons/fa";
+import { MdAddPhotoAlternate } from "react-icons/md";
 
 function Navbar() {
     return <div>
@@ -69,6 +71,11 @@ function Navbar() {
                     </div>
                 </div>
 
+            </div>
+
+            <div className="loginbox">
+                    <button className="loginbutton"><FaUser /></button>
+                    <button className="addpostbutton"><MdAddPhotoAlternate /></button>
             </div>
         </div>
 

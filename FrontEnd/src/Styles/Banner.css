@@ -34,6 +34,7 @@
 }
 .inputpesquisabanner button{
     padding: 15px;
+    width: 80px;
     border: none;
     background-color: #3a4d88;
     color: whitesmoke;
@@ -42,4 +43,5 @@
 .inputpesquisabanner button:hover{
     background-color: #161d31;
     cursor: pointer;
+    transition:  linear 0.2s;
 }
