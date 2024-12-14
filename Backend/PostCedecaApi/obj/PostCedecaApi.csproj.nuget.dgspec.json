@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\BlogApi\\BlogApi.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\PostCedecaApi\\PostCedecaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\BlogApi\\BlogApi.csproj": {
+    "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\PostCedecaApi\\PostCedecaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\BlogApi\\BlogApi.csproj",
-        "projectName": "BlogApi",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\BlogApi\\BlogApi.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\PostCedecaApi\\PostCedecaApi.csproj",
+        "projectName": "PostCedecaApi",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\PostCedecaApi\\PostCedecaApi.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\BlogApi\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\ProjetoCedeca\\Backend\\PostCedecaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,19 +43,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.68.0, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.5, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[9.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
