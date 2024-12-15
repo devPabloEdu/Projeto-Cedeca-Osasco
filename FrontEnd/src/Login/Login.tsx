@@ -20,24 +20,30 @@ const Login = ({ setToken }) => {
     };
   
     return (
-      <div>
-        <h2>Login</h2>
-        <form onSubmit={handleLogin}>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Senha"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button type="submit">Entrar</button>
-        </form>
-        {error && <p>{error}</p>}
+      <div className='LoginBox'>
+        <div>
+          <img src="" alt="" />
+        </div>
+
+        <div>
+          <h2>Seja bem vindo</h2>
+          <form onSubmit={handleLogin}>
+            <input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button type="submit">Entrar</button>
+          </form>
+          {error && <p>{error}</p>}
+        </div>
       </div>
     );
   };

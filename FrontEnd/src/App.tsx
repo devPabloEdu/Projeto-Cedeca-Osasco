@@ -20,6 +20,7 @@ import "./Styles/Timeline.css";
 import "./Styles/Footer.css";
 import "./Styles/pagemunhoz.css";
 import "./Styles/pageDoe.css";
+import "./Styles/login.css";
 import AOS from "aos";
 
 
