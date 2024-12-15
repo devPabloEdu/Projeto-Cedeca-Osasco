@@ -6,33 +6,33 @@ using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurando o Firebase (uma vez só)
-FirebaseApp.Create(new AppOptions
+// Configuração do Firebase
+if (FirebaseApp.DefaultInstance == null)
 {
-    Credential = GoogleCredential.FromFile("backendcedeca-firebase-adminsdk-yl6cr-c24e8e4642.json")
-});
+    FirebaseApp.Create(new AppOptions
+    {
+        Credential = GoogleCredential.FromFile("backendcedeca-firebase-adminsdk-yl6cr-c24e8e4642.json")
+    });
+}
 
-// Configurando CORS
+// Configurando serviços
+builder.Services.AddControllers();
+builder.Services.AddScoped<FirebaseAuthService>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowFrontend", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")  // Permite apenas esse domínio
+        policy.WithOrigins("http://localhost:3000")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
 });
 
-// Adicionando serviços
-builder.Services.AddControllers();
-builder.Services.AddScoped<FirebaseAuthService>();
-builder.Services.AddScoped<FirestoreService>();
-
+// Constrói o app
 var app = builder.Build();
 
-// Usando CORS
+// Configurando middlewares e rotas
 app.UseCors("AllowFrontend");
-
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();

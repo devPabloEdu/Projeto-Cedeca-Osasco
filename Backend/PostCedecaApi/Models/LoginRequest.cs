@@ -1,5 +1,7 @@
-public class LoginRequest
+namespace PostCedecaApi.Models
 {
-    public string Email { get; set; }
-    public string Password { get; set; }
+    public class LoginRequest
+    {
+        public string IdToken { get; set; }
+    }
 }

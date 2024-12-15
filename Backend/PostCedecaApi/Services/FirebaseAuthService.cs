@@ -18,21 +18,16 @@ public class FirebaseAuthService
         }
     }
 
-    // Método para criar um token para o cliente
-    public async Task<string> LoginAsync(string email, string password)
+    // Método para validar o ID Token enviado pelo cliente
+    public async Task<string> LoginAsync(string idToken)
     {
         try
         {
-            // Não podemos validar a senha diretamente aqui, pois FirebaseAdmin não suporta isso
-            // Você precisará que o cliente autentique com email/senha e envie o token para validar no backend
-
-            // Se o cliente autenticou com sucesso e obteve o token, você pode verificar o token aqui
-            var auth = FirebaseAuth.DefaultInstance;
-
             // Verifica o ID token enviado pelo cliente
-            var user = await auth.VerifyIdTokenAsync(password);  // Aqui 'password' deve ser o ID Token
+            var auth = FirebaseAuth.DefaultInstance;
+            var decodedToken = await auth.VerifyIdTokenAsync(idToken);
 
-            return user.Uid; // Retorna o UID do usuário autenticado
+            return decodedToken.Uid; // Retorna o UID do usuário autenticado
         }
         catch (Exception ex)
         {

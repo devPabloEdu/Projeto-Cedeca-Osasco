@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState  } from "react";
 import {BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar.tsx";
 import Banner from "./Components/Banner.tsx"
@@ -26,6 +26,7 @@ import AOS from "aos";
 
 
 function App() {
+    const [token, setToken] = useState("");
   return (
       <Router>
           <div className="App">
@@ -57,7 +58,7 @@ function App() {
 
                       <Route path="/Doe" element={<Doe />} />
 
-                      <Route path="/Login" element={<Login />} />
+                      <Route path="/Login" element={<Login setToken={setToken} /> } />
 
                   </Routes>
               </main>

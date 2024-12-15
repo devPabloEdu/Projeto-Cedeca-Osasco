@@ -16,20 +16,25 @@ public class AuthController : ControllerBase
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginRequest request)
     {
-        if (request == null || string.IsNullOrEmpty(request.Email) || string.IsNullOrEmpty(request.Password))
+        if (request == null || string.IsNullOrEmpty(request.IdToken))
         {
-            return BadRequest("Email e senha são obrigatórios.");
+            return BadRequest("ID Token é obrigatório.");
         }
 
         try
         {
-            // O método LoginAsync foi alterado para aceitar o token de ID do cliente
-            var token = await _firebaseAuthService.LoginAsync(request.Email, request.Password);
-            return Ok(new { Token = token });  // Retorna o UID do usuário ou um token de acesso
+            var uid = await _firebaseAuthService.LoginAsync(request.IdToken);
+            return Ok(new { Uid = uid });
         }
         catch (Exception ex)
         {
             return Unauthorized(new { message = ex.Message });
         }
     }
+}
+
+// Modelo para o corpo da requisição
+public class LoginRequest
+{
+    public string IdToken { get; set; }
 }
