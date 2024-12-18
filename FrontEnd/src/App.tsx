@@ -12,6 +12,8 @@ import Centro from "./Pages/Centro.tsx";
 import Casper from "./Pages/Casper.tsx";
 import Doe from "./Pages/Doe.tsx";
 import Login from "./Login/Login.tsx";
+import PostForm from "./Components/CreatePost.tsx";
+import PostList from "../src/Pages/Noticias.tsx";
 import "./Styles/Navbar.css";
 import "./Styles/Banner.css";
 import "./Styles/Quemsomos.css";
@@ -21,6 +23,8 @@ import "./Styles/Footer.css";
 import "./Styles/pagemunhoz.css";
 import "./Styles/pageDoe.css";
 import "./Styles/login.css";
+import "./Styles/CreatePost.css";
+import "./Styles/PostList.css";
 import AOS from "aos";
 
 
@@ -59,6 +63,10 @@ function App() {
                       <Route path="/Doe" element={<Doe />} />
 
                       <Route path="/Login" element={<Login setToken={setToken} /> } />
+
+                      <Route path="/criar-post" element={<PostForm />} />
+
+                      <Route path="/post-list" element={<PostList />}/>
 
                   </Routes>
               </main>

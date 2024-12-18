@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { loginUser } from '../Api.tsx'; // Importando função centralizada
 import { BiSolidLogInCircle } from "react-icons/bi";
+import { useNavigate } from 'react-router-dom';
 
 const Login = ({ setToken }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -13,7 +15,7 @@ const Login = ({ setToken }) => {
       const data = await loginUser(email, password); // Chamando API centralizada
       setToken(data.Token);
       localStorage.setItem('token', data.Token);
-      window.location.href = '/posts';
+      navigate('/criar-post');
     } catch (err) {
       setError(err.message);
     }

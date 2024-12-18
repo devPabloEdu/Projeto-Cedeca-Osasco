@@ -21,7 +21,7 @@
     font-weight: 800;
 }
 .inputsbox{
-    padding: 75px;
+    padding: 72px;
     border: solid rgba(0, 0, 0, 0.315) 1px;
     background-color: whitesmoke
 }
@@ -42,7 +42,9 @@
 }
 .inputsbox input{
     padding: 10px;
-    background-color: #21294467;
+    background-color: #576baa67;
     color: white;
     border: none;
+    font-size: 15px;
+    font-weight: 800;
 }

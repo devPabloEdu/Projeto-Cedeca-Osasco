@@ -6,7 +6,11 @@ public class FirestoreService
 
     public FirestoreService()
     {
-        _firestoreDb = FirestoreDb.Create("meu-projeto-firebase");
+         var credentialPath = Path.Combine(AppContext.BaseDirectory, "backendcedeca-firebase-adminsdk-yl6cr-c24e8e4642.json");
+    Environment.SetEnvironmentVariable("GOOGLE_APPLICATION_CREDENTIALS", credentialPath);
+
+    // Certifique-se que "meu-projeto-firebase" é o ID do projeto correto no Firebase
+    _firestoreDb = FirestoreDb.Create("backendcedeca");
     }
 
     public async Task CreatePost(string title, string content, string imageUrl)

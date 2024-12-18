@@ -36,3 +36,25 @@ export const loginUser = async (email: string, password: string) => {
         throw error;
     }
 };
+
+export const createPost = async (title, content, imageUrl) => {
+    try {
+        const response = await axios.post(`${API_URL}/api/Posts`, { 
+            title, 
+            content, 
+            imageUrl 
+        });
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Erro ao criar post');
+    }
+};
+
+export const getPosts = async () => {
+    try {
+        const response = await axios.get(`${API_URL}/api/Posts`);
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response?.data?.message || 'Erro ao carregar posts');
+    }
+};

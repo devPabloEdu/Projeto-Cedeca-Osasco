@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import axios from 'axios';
 
+
 const API_URL = 'http://localhost:5163'; // URL do backend
 
 export const loginUser = async (email, password) => {

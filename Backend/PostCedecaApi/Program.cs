@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
+GoogleCredential.FromFile(Path.Combine(AppContext.BaseDirectory, "backendcedeca-firebase-adminsdk-yl6cr-c24e8e4642.json"));
 
 // Configuração do Firebase
 if (FirebaseApp.DefaultInstance == null)
@@ -16,6 +17,7 @@ if (FirebaseApp.DefaultInstance == null)
 }
 
 // Configurando serviços
+builder.Services.AddScoped<FirestoreService>();
 builder.Services.AddControllers();
 builder.Services.AddScoped<FirebaseAuthService>();
 builder.Services.AddCors(options =>

@@ -71,11 +71,14 @@ function Navbar() {
                     </div>
                 </div>
 
+                <div className="nav-item">
+                    <Link to="/post-list"><a href="">Notícias</a></Link>
+                </div>
+
             </div>
 
             <div className="loginbox">
                     <Link to="/Login"><button className="loginbutton"><FaUser /></button></Link>
-                    <button className="addpostbutton"><MdAddPhotoAlternate /></button>
             </div>
         </div>
 
