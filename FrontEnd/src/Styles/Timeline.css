@@ -104,3 +104,19 @@
 .timeline-event.bottom::before {
     left: 20px;
 }
+
+@media (max-width: 768px) {
+    .timeline-event::before{
+        display: none;
+    }
+    .timeline-event.bottom {
+        left: 30%;
+    }
+    .timeline-event.top {
+        left: 30%;
+        text-align: right;
+    }
+    .timeline-content{
+        box-shadow: #1117275d 15px 15px 15px;
+    }
+  }

@@ -29,3 +29,9 @@
     line-height: 40px;
     border-radius: 20px;
 }
+
+@media (max-width: 768px) {
+    .Quemsomosbox{
+        display: block;
+    }
+  }

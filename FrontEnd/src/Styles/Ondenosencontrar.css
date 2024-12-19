@@ -100,3 +100,18 @@
 .lugaresbox div:hover::after {
     opacity: 1; /* Mostra o fundo azul */
 }
+
+
+@media (max-width: 768px) {
+    .ondenosencontrarbox h2{
+        font-size: 35px;
+    }
+    .ondenosencontrarbox h2::after{
+        content: "Clique para mais detalhes";
+        display: block;
+        font-size: 18px;
+    }
+    .lugaresbox{
+        display: block;
+    }
+  }

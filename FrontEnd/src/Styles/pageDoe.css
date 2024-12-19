@@ -167,3 +167,38 @@
     color: #0a0d16;
     font-size: 19px;
 }
+
+@media (max-width: 768px){
+    .sejaparceirobox{
+        padding: 80px;
+        text-align: center;
+        display: block;
+    }
+    .bannerdoeBox h1{
+        font-size: 3em;
+    }
+    .bannerdoeBox p{
+        text-align: center;
+        padding: 10px;
+    }
+    .DoeMainBox{
+        display: block;
+        text-align: center;
+    }
+    .DoeMainBox img{
+        width: 50%;
+        margin: 20px;
+    }
+    .doacoes567box{
+        display: block;
+    }
+    .doacoes567boxcontent{
+        margin: 10px;
+    }
+    .contatosbox{
+        display: block;
+    }
+    .contatosbox h3{
+        font-size: 1em;
+    }
+}

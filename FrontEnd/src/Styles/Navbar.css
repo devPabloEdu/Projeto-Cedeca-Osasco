@@ -162,3 +162,58 @@
     cursor: pointer;
     transition:  linear 0.2s;
   }
+  .MenuCelular{
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .logocedecanav img{
+        width: 50%;
+    }
+    .navbarItens {
+        display: none;
+    }
+    .loginbox{
+        display: none;
+    }
+    .voltaroaotopobutton{
+        transform: translateY(1400%) translateX(50%);
+    }
+    .MenuCelular{
+        display: block;
+        gap: 0px;
+        width: 10%;
+        position: relative;
+    }
+    .MenuCelular button{
+        padding: 10px;
+        font-size: 19px;
+        color: #3a4d88;
+        border: none;
+        transform: translateX(-100%);
+        position: relative;
+    }
+    .Submenu{
+        display: none;
+        color: #121829;
+    }
+    .MenuCelular:hover .Submenu{
+        display: block;
+        position: absolute;
+        transform: translateY(15%);
+        transform: translateX(-60%);
+        animation: fadeIn 0.3s ease-in-out;
+        z-index: 5;
+        padding: 20px;
+        background-color: whitesmoke;
+    }
+    .Submenu a{
+        color: #121829;
+        padding: 15px;
+        text-decoration: none;
+        text-align: center;
+    }
+    .voltaroaotopobutton{
+        transform: translateY(1800%) translateX(50%);
+    }
+  }

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import Logocedeca from "../Assets/Logocedeca.png";
 import { FaUser } from "react-icons/fa";
 import { MdAddPhotoAlternate } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 function Navbar() {
     return <div>
@@ -76,9 +78,31 @@ function Navbar() {
                 </div>
 
             </div>
-
+            
             <div className="loginbox">
                     <Link to="/Login"><button className="loginbutton"><FaUser /></button></Link>
+            </div>
+
+            <div className="MenuCelular">
+            <button><GiHamburgerMenu /></button>
+            <div className="Submenu">
+            <Link to="/post-list"><a href="">Notícias</a></Link>
+
+            <Link to="/Doe">Formas de Apoio</Link>
+
+            <Link to="/Login">Login</Link>
+
+            <Link to="/atividades-munhoz-junior">Atividades Munhoz Júnior</Link>
+
+            <Link to="/atividades-centro">Atividades Unidade Centro</Link>
+
+
+            <Link to="/atividades-recanto">Atividades Recanto das Rosas</Link>
+
+            <Link to="/atividades-casper">Atividades Casper Libero</Link>
+
+            <a href="https://www.instagram.com/cedeca_osasco/" target="new_blank">Instagram</a>
+             </div>
             </div>
         </div>
 
@@ -86,6 +110,7 @@ function Navbar() {
             <a href="#iniciodapaginaid"><button>^</button></a>
         </div>
     </div>
+    
 }
 
 export default Navbar;

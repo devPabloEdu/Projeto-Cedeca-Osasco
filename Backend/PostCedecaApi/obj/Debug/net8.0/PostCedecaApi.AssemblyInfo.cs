@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PostCedecaApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+152e8c28b0a63330ad9cce101a5e5b0cdf2c3a13")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+047113b95041083a417ba9d1d25de1aff8760117")]
 [assembly: System.Reflection.AssemblyProductAttribute("PostCedecaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PostCedecaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
